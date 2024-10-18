@@ -592,5 +592,6 @@ footer a:hover {
     .section.ten .content .bottom a {
         font-size: 8px;
         font-weight: 400;
+        margin: 0 10px;
     }
 }
