@@ -585,6 +585,10 @@ footer a:hover {
         font-size: 9px;
     }
 
+    .section.ten .content .buttons{
+        bottom: 210px;
+    }
+
     .section.ten .content .bottom {
         bottom: 100px;
     }
@@ -592,6 +596,6 @@ footer a:hover {
     .section.ten .content .bottom a {
         font-size: 8px;
         font-weight: 400;
-        margin: 0 10px;
+        margin: 0 7px;
     }
 }
