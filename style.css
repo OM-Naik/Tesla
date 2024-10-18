@@ -510,7 +510,7 @@ footer a:hover {
     }
 
     .section.ten .content .bottom {
-        bottom: 10%;
+        bottom: 15%;
     }
 
     .section.two {
@@ -585,4 +585,12 @@ footer a:hover {
         font-size: 9px;
     }
 
+    .section.ten .content .bottom {
+        bottom: 100px;
+    }
+
+    .section.ten .content .bottom a {
+        font-size: 8px;
+        font-weight: 400;
+    }
 }
