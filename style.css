@@ -1,0 +1,611 @@
+@import url(https://gists.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: GothamPro;
+    height: 100%;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.fp-is-overflow>.fp-overflow {
+    overflow-y: hidden;
+}
+
+.header {
+    position: fixed;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    height: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.header.white-text {
+    color: #fff;
+    transition: color 1s ease-in-out;
+}
+
+.header.black-text {
+    color: #171A20;
+    transition: color 1s ease-in-out;
+}
+
+.header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo {
+    width: 130px;
+}
+
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .desktop {
+        display: initial;
+    }
+}
+
+.middle {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle button {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    background: transparent;
+    color: inherit;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 980px;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.right {
+    width: 100px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.right a {
+    width: 25px;
+}
+
+.right a svg {
+    border-radius: 50%;
+    color: inherit;
+}
+
+.right a svg:hover,
+.middle button:hover {
+    backdrop-filter: blur(16px);
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.menub li {
+    display: initial;
+}
+
+.menub li button {
+    cursor: pointer;
+    font-size: 2.25vw;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    backdrop-filter: blur(16px);
+    background-color: rgba(0, 0, 0, .05);
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+@media screen and (min-width: 800px) {
+    .menub li {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+aside {
+    position: fixed;
+    right: -100%;
+    width: 100%;
+    background-color: #ffffff70;
+    backdrop-filter: blur(15px);
+    color: #171A20;
+    padding: 10px 20px;
+    z-index: 999;
+    height: 100vh;
+    text-align: right;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+aside.show {
+    right: 0;
+    opacity: 1;
+}
+
+aside .closebtn {
+    font-size: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+aside a {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    color: inherit;
+    text-decoration: none;
+    padding: 20px 0;
+    font-size: 22px;
+    text-align: left;
+}
+
+aside a svg {
+    position: relative;
+    width: 5%;
+    margin-right: 10px;
+}
+
+aside a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    text-decoration-color: #171A20;
+    transition: text-decoration-color 1s ease-in-out;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.secv1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.section .content {
+    position: absolute;
+    top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 92%;
+    z-index: 99;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.content.white-text {
+    color: #fff;
+    transition: color opacity 1s ease-in-out;
+}
+
+.content.black-text {
+    color: #171A20;
+    transition: color 1s ease-in-out;
+}
+
+.section .content h1 {
+    font-size: 45px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section .content h2 {
+    font-size: 22px;
+}
+
+.section .content p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.section .content h1,
+.section .content h2,
+.section .content p {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 1s;
+}
+
+.section.active .content h1,
+.section.active .content h2,
+.section.active .content p {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 1s;
+    transition-delay: 0.3s;
+}
+
+.section .content p a {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    color: inherit;
+}
+
+.section .content p a:hover {
+    text-decoration: 1.5px underline;
+}
+
+.section .content .buttons {
+    position: absolute;
+    bottom: 13%;
+}
+
+.section .content .buttons a {
+    display: block;
+    padding: 13px 80px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+}
+
+.section .content .buttons a:first-child {
+    background-color: #fff;
+    color: #171A20;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.section .content .buttons a:first-child:hover {
+    background-color: rgba(0, 0, 0, 0.60);
+    backdrop-filter: blur(16px);
+    color: #fff;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.section .content .buttons a:last-child {
+    /* backdrop-filter: blur(16px); */
+    background-color: rgba(0, 0, 0, 0.60);
+    color: #fff;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.section .content .buttons a:last-child:hover {
+    backdrop-filter: blur(16px);
+    transition: backdrop-filter 1s ease-in-out;
+}
+
+.section .content .buttons {
+    display: grid;
+    row-gap: 20px;
+}
+
+@media screen and (min-width: 800px) {
+    .section .content .buttons {
+        max-width: 640px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+}
+
+.section .content .bottom {
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+}
+
+.section .content .bottom h1 {
+    font-family: sans-serif;
+    font-size: 12.5px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.section .content .bottom a {
+    font-size: 12.5px;
+    font-weight: 500;
+    text-decoration: 1px underline;
+    text-underline-offset: 0.25em;
+    color: inherit;
+
+}
+
+.section.two {
+    background-image: url(Images/xufyfcvqhmq36szytod7.jpg);
+}
+
+.section.three {
+    background-image: url(Images/Homepage-Model-X-Desktop-LHD.jpg);
+}
+
+.section.four {
+    background-image: url(Images/Homepage-Model-S-Desktop-LHD-6.22.jpg);
+}
+
+.section.five {
+    background-image: url(Images/Homepage-Cybertruck-Desktop.jpg);
+}
+
+.secv2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.section.six .content .buttons {
+    display: inline-block;
+}
+
+.section.six .content .buttons a {
+    background-color: transparent;
+    backdrop-filter: none;
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+.section.six .content .buttons a:hover {
+    background-color: #fff;
+    color: #171A20;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.section.seven {
+    background-image: url(Images/Homepage-SolarPanels-01-Desktop.jpg);
+}
+
+.section.eight {
+    background-image: url(Images/Homepage-SolarRoof-Desktop-Global.jpg);
+}
+
+.section.nine {
+    background-image: url(Images/Homepage-Powerwall-01-Desktop.jpg);
+}
+
+.section.ten {
+    background-image: url(Images/Homepage-Accessories-Desktop-NA-APAC.jpg);
+}
+
+.section.ten .content .buttons {
+    display: inline-block;
+}
+
+.section.ten .content .buttons a {
+    background-color: #fff;
+    backdrop-filter: none;
+    color: #171A20;
+}
+
+.section.ten .content .buttons a:hover {
+    backdrop-filter: blur(16px);
+    color: #171A20;
+    background-color: #ffffff9a;
+}
+
+
+.section.ten .content .bottom {
+    position: absolute;
+    bottom: 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+}
+
+.section.ten .content .bottom a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.section.ten .content .bottom a:hover {
+    text-decoration: 1px underline;
+    text-underline-offset: 0.25em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #000;
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(16px);
+    padding: 5px 8px;
+    font-size: 15px;
+    font-family: sans-serif;
+    display: inline-block;
+    border-radius: 3px;
+    margin: 12px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #171A20;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: 1px underline;
+    text-underline-offset: 0.25em;
+}
+
+.fp-watermark {
+    display: none;
+}
+
+#mobilev {
+    display: none;
+}
+
+/* @media screen and (max-width: 500px) {
+    body {
+        background-color: #000;
+    }
+
+    .header,
+    aside,
+    #fullpage {
+        display: none;
+    }
+
+    #mobilev {
+        display: initial;
+    }
+
+    .logo {
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%);
+        height: 5vh;
+        width: 70%;
+        text-decoration: none;
+        color: #4386dc;
+    }
+
+    svg {
+        margin-top: 5px;
+    }
+
+
+    h1 {
+        position: absolute;
+        width: 90%;
+        text-align: center;
+        top: 300px;
+        left: 50%;
+        transform: translate(-50%);
+        color: #fff;
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+    h1>span {
+        color: #a62266;
+        text-decoration: underline;
+        text-decoration-color: #a62266;
+        text-underline-offset: 0.15em;
+    }
+
+    footer {
+        top: 400px;
+        left: 47.5%;
+        width: 50%;
+        transform: translate(-50%);
+        bottom: auto;
+        font-size: 14px;
+    }
+} */
+
+@media screen and (min-width: 300px) and (max-width: 1500px) {
+    .section .content {
+        top: 5%;
+    }
+
+    .section .content .bottom {
+        bottom: 6%;
+    }
+
+    .section.ten .content .bottom {
+        bottom: 10%;
+    }
+
+    .section.two {
+        background-image: url(/Images/Sec2.jpg);
+    }
+
+    .section.three {
+        background-image: url(/Images/Sec3.jpg);
+    }
+
+    .section.four {
+        background-image: url(/Images/Sec4.jpg);
+    }
+
+    .section.five {
+        background-image: url(/Images/Sec5.jpg);
+    }
+
+    .section.seven {
+        background-image: url(/Images/Sec7.jpg);
+    }
+
+    .section.eight {
+        background-image: url(/Images/Sec8.jpg);
+    }
+
+    .section.nine {
+        background-image: url(/Images/Sec9.jpg);
+    }
+
+    .section.ten {
+        background-image: url(/Images/Sec10.jpg);
+    }
+
+    footer {
+        bottom: 5%;
+    }
+}
