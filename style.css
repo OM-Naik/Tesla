@@ -565,11 +565,24 @@ footer a:hover {
         font-size: 10px;
     }
 
+    .section .content .buttons a {
+        font-size: 10px;
+    }
+
     .section .content .buttons {
         bottom: 150px;
     }
 
     .section .content .bottom {
-        bottom: 50px;
+        bottom: 80px;
     }
+
+    .section .content .bottom h1 {
+        font-size: 10px;
+    }
+
+    .section .content .bottom a {
+        font-size: 9px;
+    }
+
 }
